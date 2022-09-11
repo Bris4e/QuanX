@@ -1,0 +1,13 @@
+payload:
+  - DOMAIN-SUFFIX,emby.wtf
+  - DOMAIN-SUFFIX,e1.o.lencr.org
+  - DOMAIN-SUFFIX,bighippo.tv
+  - DOMAIN-SUFFIX,aaa.ax
+  - DOMAIN-SUFFIX,odysseyplus.site
+  - DOMAIN-SUFFIX,embyclub.org
+  - DOMAIN-SUFFIX,gcx920110.com
+  - DOMAIN-SUFFIX,emby.kim
+  - DOMAIN,cu.poloemby.xyz
+  - DOMAIN,emby.misakaf.xyz
+  - IP-CIDR,51.15.187.228/32
+  - IP-CIDR,205.185.114.101/32
