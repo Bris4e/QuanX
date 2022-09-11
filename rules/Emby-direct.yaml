@@ -1,0 +1,12 @@
+payload:
+  - DOMAIN-SUFFIX,emby.gg
+  - DOMAIN-SUFFIX,jmsooo.com
+  - DOMAIN,embygy.misakaf.xyz
+  - DOMAIN,cn2.kwz.io
+  - DOMAIN,gtm.kws.moe
+  - DOMAIN,plex.direct
+  - DOMAIN,azsh-dmm.yijun.in
+  - IP-CIDR,101.67.8.181/32
+  - IP-CIDR,54.223.106.107/32
+  - IP-CIDR,20.205.102.200/32
+  - IP-CIDR,88.99.218.218/32
