@@ -1,0 +1,15 @@
+#!name= Emby Plugin
+#!desc= Emby 官方客户端内调用外部播放器
+#!author= @renzhipengBot, @AppleArcade, @Tsenh
+#!icon= https://raw.githubusercontent.com/Orz-3/mini/master/Color/Emby.png
+
+[Script]
+
+http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0, script-path=https://raw.githubusercontent.com/rartv/EmbyPublic/test/surge/unlock.js,tag=播放解锁
+http-response \/Users\/\w{32}\/Items\/\d+\?,requires-body=1,max-size=0, script-path=https://raw.githubusercontent.com/rartv/EmbyPublic/test/surge/emby-plugin.js,debug=添加外部播放器连接
+http-response \/plugin\/scheme, script-path=https://raw.githubusercontent.com/rartv/EmbyPublic/test/surge/emby-plugin.js,tag=打开外部播放器
+http-request,pattern=(\/Videos\/\d+\/stream\/.+\?.+&filename)|(\/Videos\/\d+\/\w{32}\/Subtitles\/\d+\/.+\?.+&filename),script-path=https://raw.githubusercontent.com/rartv/EmbyPublic/test/surge/emby-plugin.js,tag=资源路径伪静态
+http-response (\/Videos\/\d+\/stream\?.+&filename)|(\/Videos\/\d+\/\w{32}\/Subtitles\/.+&filename),requires-body=0,max-size=0, script-path=https://raw.githubusercontent.com/rartv/EmbyPublic/test/surge/download_file_rename.js,tag=下载文件重命名
+
+[MITM]
+hostname = %APPEND% mb3admin.com, *.emby.wtf:0, *.plusmedia.site:0, *.jmsooo.com:0, *.emby.enjoyit.eu.org:0, *.cristiamo.xyz:0, *.emby.cjpc.cc:0, *.emby.cjpc.tv:0, *.emby.cjpc.xyz:0, *.emby.cristiamo.top:0, *.emby.flowercloud.yt:0, *.emby.immtel.com:0, *.emby.maying.club:0, *.emby.mcwy.me:0, *.emby.mdss.cloud:0, *.emby.neko.edu.rs:0, *.emby.nexitally.com:0, *.emby.nyancat.net:0, *.emby.ok.edu.hk:0, *.emby.paoche.ooo:0, *.emby.prprcloud.com:0, *.emby.wtf:0, *.emby.xeton.dev:0, *.emby.ytoo.li:0, *.embyserver.ga:0, *.hinet.jmsooo.com:0, *.jellyfin.xeton.dev:0, *.line.emby.men:0, *.mickeycloud.com:0, *.movie.xeton.dev:0, *.plusmedia.site:0, *.pornemby.club:0, *.servers.xeton.dev:0, *.odysseyplus.site:0
