@@ -1,0 +1,11 @@
+#!name=Bypass SSL Verify for Terminus
+#!desc=Ignore SSL Certificate Expiration for Terminus servers
+#!author=Tsenh
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
+#!system=ios
+#!category=Tsenh
+
+[mitm]
+enabled = true
+hostname = -*.emby.wtf
+skip-server-cert-verify = true
