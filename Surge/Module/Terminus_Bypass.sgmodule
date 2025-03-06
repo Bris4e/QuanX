@@ -1,11 +1,9 @@
-#!name=Bypass SSL Verify for Terminus
-#!desc=Ignore SSL Certificate Expiration for Terminus servers
-#!author=Tsenh
-#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
-#!system=ios
-#!category=Tsenh
+#!name= Bypass SSL for pub1.emby.wtf
+#!desc= Skip SSL certificate verification for pub1.emby.wtf
 
-[mitm]
-enabled = true
-hostname = pub1.emby.wtf, pub2.emby.wtf, pub3.emby.wtf
-skip-server-cert-verify = true
+[Script]
+Bypass SSL = type=http-request,pattern=^https?://pub1\.emby\.wtf,script=$done({requestOptions:{"skip-cert-verify":true}});
+
+[MITM]
+enable = true
+hostname = pub1.emby.wtf
