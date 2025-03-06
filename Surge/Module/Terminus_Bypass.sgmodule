@@ -7,5 +7,5 @@
 
 [mitm]
 enabled = true
-hostname = *.emby.wtf
+hostname = pub*.emby.wtf
 skip-server-cert-verify = true
