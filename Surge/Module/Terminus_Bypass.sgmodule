@@ -2,8 +2,9 @@
 #!desc= Skip SSL certificate verification for pub1.emby.wtf
 
 [Script]
-Bypass SSL = type=http-request,pattern=^https?://pub1\.emby\.wtf,script=$done({requestOptions:{"skip-cert-verify":true}});
+# 替换 pub1.emby.wtf 的 TTL 脚本
+replaceTTL = type=http-response,pattern=https://pub1\.emby\.wtf/.*\.js,requires-body=1,max-size=524288,script-path=https://raw.githubusercontent.com/Bris4e/QuanX/refs/heads/main/Surge/replaceTTL.js
 
 [MITM]
-enable = true
+# 目标域名
 hostname = pub1.emby.wtf
